@@ -23,7 +23,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
     
     private void resizeArray(int newSize) {
-        System.out.println("resizing");
         Item[] newArray = (Item[]) new Object[newSize];
         int j = 0; 
         for(int i = 0; i < container.length; i++) {
@@ -64,7 +63,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             max *= 0.5;
             resizeArray(max);
         }
-        System.out.println("New size: " + max);
         return item;
     }
     
